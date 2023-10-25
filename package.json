@@ -1,6 +1,6 @@
 {
   "name": "qute-qrious",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Qute-QRious is a customisable QRious based library for generating QR codes free.",
   "type": "module",
   "main": "index.js",
