@@ -94,7 +94,7 @@ using the following fields:
 | Field   | Type    | Description                      | Default    | Read Only |
 | ------- | ------- | -------------------------------- | ---------- | --------- |
 | bgColor | String  | Background color of the QR code  | `"white"`  | No        |
-| Color   | Number  | Background alpha of the QR code  | `1.0`      | No        |
+| Color   | Number  | Background alpha of the QR code  | `black`    | No        |
 | canvas  | Element | Element to render the QR code    | `<canvas>` | Yes       |
 | text    | String  | Value encoded within the QR code | `""`       | No        |
 | image   | String  | Value encoded within the QR code | `""`       | No        |
