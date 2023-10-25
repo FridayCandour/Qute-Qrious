@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "ES2015",
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "declaration": true,
+    "outDir": "./dist",
+    "strict": true,
+    "isolatedModules": false
+  },
+  "include": ["./src/index.ts"]
+}

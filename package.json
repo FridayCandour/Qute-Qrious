@@ -1,0 +1,21 @@
+{
+  "name": "qute-qrious",
+  "version": "1.0.0",
+  "description": "Qute-QRious is a customisable QRious based library for generating QR codes free.",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "dist/index.d.ts",
+    "dist/index.js"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts",
+    "pub": "tsup src/index.ts && npm publish",
+    "lint": "eslint . --fix"
+  },
+  "keywords": [
+    "QR Code",
+    "Qrious"
+  ],
+  "license": "ISC"
+}

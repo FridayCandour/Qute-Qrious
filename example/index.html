@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qute-Qrious</title>
+
+    <style>
+      /* styles.css */
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: grid;
+      }
+      h1 {
+        text-align: center;
+        font-size: 24px;
+      }
+
+      #generator-container {
+        text-align: center;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+
+      #qr-code-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      #qrcode {
+        margin: 20px auto;
+        display: block;
+      }
+
+      #qr-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px; /* Adjust the logo size */
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="file"] {
+        width: 80%;
+        padding: 10px;
+        margin: 5px auto;
+        display: block;
+      }
+
+      button {
+        background-color: #0074d9;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      #qrcode {
+        margin: 2rem auto;
+        text-align: center;
+        /* border: 3px blue solid; */
+        border-radius: 8px;
+        padding: 4px;
+      }
+      .flex {
+        display: flex;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 1rem;
+      }
+      .flexy {
+        flex-direction: column;
+        display: flex;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="generator-container">
+      <h1>Custom QR Code Generator</h1>
+      <canvas id="qrcode"></canvas>
+      <label for="inputText">Enter text or URL:</label>
+      <input type="text" id="inputText" placeholder="https://example.com" />
+      <div class="flexy">
+        <label for="bgImage">Select Background Image:</label>
+        <input type="file" id="bgImage" accept="image/*" />
+      </div>
+      <div class="flex">
+        <label for="Color">Select QR code Color:</label>
+        <label for="bgColor">Select Background Color:</label>
+      </div>
+      <div class="flex">
+        <input type="color" id="Color" />
+        <input type="color" id="bgColor" value="#ffffff" />
+      </div>
+      <button id="generateQR">Generate QR Code</button>
+    </div>
+    <script src="../dist/index.js"></script>
+    <script>
+      // Event listener for generating the QR code
+      const inputText = document.getElementById("inputText");
+      const generateQR = document.getElementById("generateQR");
+      const canvas = document.getElementById("qrcode");
+      const bgColorInput = document.getElementById("bgColor");
+      const ColorInput = document.getElementById("Color");
+      const ctx = canvas.getContext("2d");
+      const bgImageInput = document.getElementById("bgImage");
+      let link;
+      QuteQRious.load().then(() => {
+        generateQR.addEventListener("click", function () {
+          const text = inputText.value;
+          QuteQRious.create({
+            canvas,
+            text,
+            bgColor: bgColorInput.value,
+            Color: ColorInput.value,
+            image: link,
+          });
+        });
+
+        // Event listener for changing the background image
+        bgImageInput.addEventListener("change", function () {
+          const file = bgImageInput.files[0];
+          const text = inputText.value;
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              // Position the logo in the center of the QR code
+              QuteQRious.create({
+                canvas,
+                text,
+                image: e.target.result,
+                bgColor: bgColorInput.value,
+                Color: ColorInput.value,
+              });
+              link = e.target.result;
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
