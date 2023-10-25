@@ -12,6 +12,8 @@
 
 [QRious QRious](https://github.com/FridayCandour/Qute-Qrious) Qute-QRious is a customisable QRious based library for generating QR codes free.
 
+[live demo](https://fridaycandour.github.io/Qute-Qrious/example/index.html)
+
 [![License](https://img.shields.io/npm/l/qute-qrious.svg?style=flat-square)](https://github.com/FridayCandour/Qute-Qrious/blob/master/LICENSE.md)
 [![Release](https://img.shields.io/npm/v/qute-qrious.svg?style=flat-square)](https://www.npmjs.com/package/qrious)
 
@@ -100,8 +102,5 @@ using the following fields:
 | image   | String  | Value encoded within the QR code | `""`       | No        |
 
 ## License
-
-Copyright © 2017 Alasdair Mercer  
-Copyright © 2010 Tom Zerucha
 
 See [LICENSE.md](https://github.com/FridayCandour/Qute-Qrious/blob/master/LICENSE.md) for more information on the GPLv3 license.
