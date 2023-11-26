@@ -1,14 +1,14 @@
 # Qute QRious
 
-     .d88888b.  8888888b.  d8b
-    d88P" "Y88b 888   Y88b Y8P
-    888     888 888    888
-    888     888 888   d88P 888  .d88b.  888  888 .d8888b
-    888     888 8888888P"  888 d88""88b 888  888 88K
-    888 Y8b 888 888 T88b   888 888  888 888  888 "Y8888b.
-    Y88b.Y8b88P 888  T88b  888 Y88..88P Y88b 888      X88
-     "Y888888"  888   T88b 888  "Y88P"   "Y88888  88888P'
-           Y8b
+     .d88888b.    .d88888b.  8888888b.  d8b
+    d88P" "Y88b  d88P" "Y88b 888   Y88b Y8P
+    888     888  888     888 888    888
+    888     888  888     888 888   d88P 888  .d88b.  888  888 .d8888b
+    888     888  888     888 8888888P"  888 d88""88b 888  888 88K
+    888 Y8b 888  888 Y8b 888 888 T88b   888 888  888 888  888 "Y8888b.
+    Y88b.Y8b88P  Y88b.Y8b88P 888  T88b  888 Y88..88P Y88b 888      X88
+     "Y888888"    "Y888888"  888   T88b 888  "Y88P"   "Y88888  88888P'
+           Y8b          Y8b
 
 [QRious QRious](https://github.com/FridayCandour/Qute-Qrious) Qute-QRious is a customisable QRious based library for generating QR codes free.
 
